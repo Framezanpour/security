@@ -93,3 +93,9 @@ $IPT -A FORWARD -s $vLAN3 -d $v2c220 -j ACCEPT
 
 #v1c110 should have access to vLAN2
 $IPT -A FORWARD -s $v1c110 -d $vLAN2 -j ACCEPT
+
+
+#v1c10 and v1c11 should have access to v1c5 change to v1c10 and v1c11 should have access to v2c220
+$IPT -A FORWARD -s $v1c10 -d $v2c220 -j ACCEPT
+$IPT -A FORWARD -s $v1c11 -d $v2c220 -j ACCEPT
+
